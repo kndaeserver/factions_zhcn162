@@ -37,17 +37,17 @@ public class CmdFactionsPlayer extends FCommand
 		// INFO: Power (as progress bar)
 		double progressbarQuota = uplayer.getPower() / uplayer.getPowerMax();
 		int progressbarWidth = (int) Math.round(uplayer.getPowerMax() / uplayer.getPowerMaxUniversal() * 100);
-		msg("<k>Power: <v>%s", Progressbar.HEALTHBAR_CLASSIC.withQuota(progressbarQuota).withWidth(progressbarWidth).render());
+		msg("<k>能量: <v>%s", Progressbar.HEALTHBAR_CLASSIC.withQuota(progressbarQuota).withWidth(progressbarWidth).render());
 				
 		// INFO: Power (as digits)
-		msg("<k>Power: <v>%.2f / %.2f", uplayer.getPower(), uplayer.getPowerMax());
+		msg("<k>能量值: <v>%.2f / %.2f", uplayer.getPower(), uplayer.getPowerMax());
 		
 		// INFO: Power Boost
 		if (uplayer.hasPowerBoost())
 		{
 			double powerBoost = uplayer.getPowerBoost();
 			String powerBoostType = (powerBoost > 0 ? "bonus" : "penalty");
-			msg("<k>Power Boost: <v>%f <i>(a manually granted %s)", powerBoost, powerBoostType);
+			msg("<k>能量提升: <v>%f <i>(a manually granted %s)", powerBoost, powerBoostType);
 		}
 		
 		// INFO: Power per Hour
@@ -61,13 +61,13 @@ public class CmdFactionsPlayer extends FCommand
 			LinkedHashMap<TimeUnit, Long> unitcountsTillMax = TimeDiffUtil.unitcounts(millisTillMax, TimeUnit.getAllButMillis());
 			unitcountsTillMax = TimeDiffUtil.limit(unitcountsTillMax, 2);
 			String unitcountsTillMaxFormated = TimeDiffUtil.formatedVerboose(unitcountsTillMax, "<i>");
-			stringTillMax = Txt.parse(" <i>(%s <i>left till max)", unitcountsTillMaxFormated);
+			stringTillMax = Txt.parse(" <i>(%s <i>后达到最大值)", unitcountsTillMaxFormated);
 		}
 		
-		msg("<k>Power per Hour: <v>%.2f%s", uplayer.getPowerPerHour(), stringTillMax);
+		msg("<k>每小时增长能量值: <v>%.2f%s", uplayer.getPowerPerHour(), stringTillMax);
 		
 		// INFO: Power per Death
-		msg("<k>Power per Death: <v>%.2f", uplayer.getPowerPerDeath());
+		msg("<k>死亡后掉落能量值: <v>%.2f", uplayer.getPowerPerDeath());
 		
 	}
 }

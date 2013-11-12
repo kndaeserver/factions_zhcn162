@@ -49,10 +49,10 @@ public class CmdFactionsFaction extends FCommand
 		boolean normal = faction.isNormal();
 		
 		// INFO: Title
-		msg(Txt.titleize(Txt.upperCaseFirst(faction.getUniverse()) + " Faction " + faction.getName(usender)));
+		msg(Txt.titleize(Txt.upperCaseFirst(faction.getUniverse()) + " 公会 " + faction.getName(usender)));
 		
 		// INFO: Description
-		msg("<a>Description: <i>%s", faction.getDescription());	
+		msg("<a>描述: <i>%s", faction.getDescription());	
 		
 		if (normal)
 		{
@@ -63,12 +63,12 @@ public class CmdFactionsFaction extends FCommand
 			msg("<a>Age: <i>%s", ageString);
 			
 			// INFO: Open
-			msg("<a>Open: <i>"+(faction.isOpen() ? "<lime>Yes<i>, anyone can join" : "<rose>No<i>, only invited people can join"));
+			msg("<a>开放状态: <i>"+(faction.isOpen() ? "<lime>是<i>, 允许所有人加入" : "<rose>否<i>, 只有被邀请才能够加入"));
 	
 			// INFO: Power
 			double powerBoost = faction.getPowerBoost();
 			String boost = (powerBoost == 0.0) ? "" : (powerBoost > 0.0 ? " (bonus: " : " (penalty: ") + powerBoost + ")";
-			msg("<a>Land / Power / Maxpower: <i> %d/%d/%d %s", faction.getLandCount(), faction.getPowerRounded(), faction.getPowerMaxRounded(), boost);
+			msg("<a>领地 / 能量值 / 最大能量值: <i> %d/%d/%d %s", faction.getLandCount(), faction.getPowerRounded(), faction.getPowerMaxRounded(), boost);
 			
 			// show the land value
 			if (Econ.isEnabled(faction))
@@ -93,13 +93,13 @@ public class CmdFactionsFaction extends FCommand
 						money *= -1;
 					}
 					
-					msg("<a>Total land %s %s: <i>%s", type.toString().toLowerCase(), word, Money.format(faction, money));
+					msg("<a>领地总数 %s %s: <i>%s", type.toString().toLowerCase(), word, Money.format(faction, money));
 				}
 				
 				// Show bank contents
 				if (UConf.get(faction).bankEnabled)
 				{
-					msg("<a>Bank contains: <i>"+Money.format(faction, Money.get(faction)));
+					msg("<a>银行信息: <i>"+Money.format(faction, Money.get(faction)));
 				}
 			}
 			
@@ -130,8 +130,8 @@ public class CmdFactionsFaction extends FCommand
 			sendMessage(Txt.parse("<a>In Truce with: ") + Txt.implode(relationNames.get(Rel.TRUCE), sepparator));
 		}
 		
-		sendMessage(Txt.parse("<a>Allies: ") + Txt.implode(relationNames.get(Rel.ALLY), sepparator));
-		sendMessage(Txt.parse("<a>Enemies: ") + Txt.implode(relationNames.get(Rel.ENEMY), sepparator));
+		sendMessage(Txt.parse("<a>盟友: ") + Txt.implode(relationNames.get(Rel.ALLY), sepparator));
+		sendMessage(Txt.parse("<a>敌对: ") + Txt.implode(relationNames.get(Rel.ENEMY), sepparator));
 		
 		// List the followers...
 		List<String> followerNamesOnline = new ArrayList<String>();
@@ -153,11 +153,11 @@ public class CmdFactionsFaction extends FCommand
 			}
 		}
 		
-		sendMessage(Txt.parse("<a>Followers online (%s): ", followerNamesOnline.size()) + Txt.implode(followerNamesOnline, sepparator));
+		sendMessage(Txt.parse("<a>在线成员 (%s): ", followerNamesOnline.size()) + Txt.implode(followerNamesOnline, sepparator));
 		
 		if (normal)
 		{
-			sendMessage(Txt.parse("<a>Followers offline (%s): ", followerNamesOffline.size()) + Txt.implode(followerNamesOffline, sepparator));
+			sendMessage(Txt.parse("<a>离线成员 (%s): ", followerNamesOffline.size()) + Txt.implode(followerNamesOffline, sepparator));
 		}
 	}
 	

@@ -38,14 +38,14 @@ public class CmdFactionsKick extends FCommand
 		// Validate
 		if (usender == uplayer)
 		{
-			msg("<b>You cannot kick yourself.");
-			msg("<i>You might want to: %s", Factions.get().getOuterCmdFactions().cmdFactionsLeave.getUseageTemplate(false));
+			msg("<b>你不能移除自己.");
+			msg("<i>你可能要: %s", Factions.get().getOuterCmdFactions().cmdFactionsLeave.getUseageTemplate(false));
 			return;
 		}
 		
 		if (uplayer.getRole() == Rel.LEADER && !(this.senderIsConsole || usender.isUsingAdminMode()))
 		{
-			msg("<b>The leader can not be kicked.");
+			msg("<b>会长不能被移除.");
 			return;
 		}
 
@@ -65,11 +65,11 @@ public class CmdFactionsKick extends FCommand
 		if (event.isCancelled()) return;
 
 		// Inform
-		uplayerFaction.msg("%s<i> kicked %s<i> from the faction! :O", usender.describeTo(uplayerFaction, true), uplayer.describeTo(uplayerFaction, true));
-		uplayer.msg("%s<i> kicked you from %s<i>! :O", usender.describeTo(uplayer, true), uplayerFaction.describeTo(uplayer));
+		uplayerFaction.msg("%s<i> 把 %s<i> 踢出了公会! :O", usender.describeTo(uplayerFaction, true), uplayer.describeTo(uplayerFaction, true));
+		uplayer.msg("%s<i> 把你从 %s<i> 公会除名了! :O", usender.describeTo(uplayer, true), uplayerFaction.describeTo(uplayer));
 		if (uplayerFaction != usenderFaction)
 		{
-			usender.msg("<i>You kicked %s<i> from the faction %s<i>!", uplayer.describeTo(usender), uplayerFaction.describeTo(usender));
+			usender.msg("<i>你把 %s<i> 从 %s<i> 公会里踢了出去!", uplayer.describeTo(usender), uplayerFaction.describeTo(usender));
 		}
 
 		if (MConf.get().logFactionKick)

@@ -53,7 +53,7 @@ public class CmdFactionsSeeChunk extends FCommand
 		showPillar(me, world, blockX, blockZ);
 		
 		// Inform
-		msg("<i>Visualized %s", chunk.toString(PSFormatHumanSpace.get()));
+		msg("<i>ø… ”ªØ %s", chunk.toString(PSFormatHumanSpace.get()));
 	}
 	
 	public static void showPillar(Player player, World world, int blockX, int blockZ)

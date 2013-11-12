@@ -32,13 +32,13 @@ public class CmdFactionsDemote extends FCommand
 		
 		if (you.getFaction() != usenderFaction)
 		{
-			msg("%s<b> is not a member in your faction.", you.describeTo(usender, true));
+			msg("%s<b> 不是你的公会成员.", you.describeTo(usender, true));
 			return;
 		}
 		
 		if (you == usender)
 		{
-			msg("<b>The target player mustn't be yourself.");
+			msg("<b>目标不能是你自己.");
 			return;
 		}
 
@@ -46,21 +46,21 @@ public class CmdFactionsDemote extends FCommand
 		{
 			if (!usender.getRole().isAtLeast(Rel.OFFICER))
 			{
-				msg("<b>You must be an officer to demote a member to recruit.");
+				msg("<b>你必须是公会助理才能把会员降级为新兵.");
 				return;
 			}
 			you.setRole(Rel.RECRUIT);
-			usenderFaction.msg("%s<i> was demoted to being a recruit in your faction.", you.describeTo(usenderFaction, true));
+			usenderFaction.msg("%s<i> 被降级为新兵.", you.describeTo(usenderFaction, true));
 		}
 		else if (you.getRole() == Rel.OFFICER)
 		{
 			if (!usender.getRole().isAtLeast(Rel.LEADER))
 			{
-				msg("<b>You must be the leader to demote an officer to member.");
+				msg("<b>你必须是公会会长才能把公会助理降级为会员.");
 				return;
 			}
 			you.setRole(Rel.MEMBER);
-			usenderFaction.msg("%s<i> was demoted to being a member in your faction.", you.describeTo(usenderFaction, true));
+			usenderFaction.msg("%s<i> 被降级为会员.", you.describeTo(usenderFaction, true));
 		}
 	}
 	

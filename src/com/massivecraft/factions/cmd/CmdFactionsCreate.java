@@ -23,9 +23,9 @@ public class CmdFactionsCreate extends FCommand
 {
 	public CmdFactionsCreate()
 	{
-		this.addAliases("创建公会");
+		this.addAliases("create");
 		
-		this.addRequiredArg("公会名称");
+		this.addRequiredArg("name");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasntFaction.get());
@@ -43,7 +43,7 @@ public class CmdFactionsCreate extends FCommand
 		
 		if (coll.isNameTaken(newName))
 		{
-			msg("<b>That name is already in use.");
+			msg("<b>这个名字已经被使用.");
 			return;
 		}
 		
@@ -76,14 +76,14 @@ public class CmdFactionsCreate extends FCommand
 		// Inform
 		for (UPlayer follower : UPlayerColls.get().get(usender).getAllOnline())
 		{
-			follower.msg("%s<i> created a new faction %s", usender.describeTo(follower, true), faction.getName(follower));
+			follower.msg("%s<i> 建立了一个名为 %s 的公会", usender.describeTo(follower, true), faction.getName(follower));
 		}
 		
-		msg("<i>You should now: %s", Factions.get().getOuterCmdFactions().cmdFactionsDescription.getUseageTemplate());
+		msg("<i>你想要: %s", Factions.get().getOuterCmdFactions().cmdFactionsDescription.getUseageTemplate());
 
 		if (MConf.get().logFactionCreate)
 		{
-			Factions.get().log(usender.getName()+" created a new faction: "+newName);
+			Factions.get().log(usender.getName()+" 建立了一个新公会: "+newName);
 		}
 	}
 	

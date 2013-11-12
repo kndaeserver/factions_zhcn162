@@ -35,7 +35,7 @@ public class CmdFactionsAutoClaim extends FCommand
 		if (forFaction == null || forFaction == usender.getAutoClaimFaction())
 		{
 			usender.setAutoClaimFaction(null);
-			msg("<i>Auto-claiming of land disabled.");
+			msg("<i>自动圈地功能禁止.");
 			return;
 		}
 		
