@@ -14,14 +14,14 @@ permissions:
   factions.access.faction: {description: grant faction access, with the proper fperm, default: false}
   factions.access.player: {description: grant player access, with the proper fperm, default: false}
   factions.access.view: {description: view access, default: false}
-  factions.admin: {description: enable adminmode, default: false}
-  factions.autoclaim: {description: autoclaim when walking, default: false}
-  factions.claim: {description: claim land where you stand, default: false}
-  factions.claim.radius: {description: claim land with radius, default: false}
-  factions.create: {description: create new faction, default: false}
-  factions.demote: {description: demote lesser members in your faction, default: false}
-  factions.description: {description: change faction description, default: false}
-  factions.disband: {description: disband faction, default: false}
+  factions.admin: {description: 是否允许管理员模式, default: false}
+  factions.autoclaim: {description: 当你在走路的时候自动圈地占领, default: false}
+  factions.claim: {description: 在你站的地方圈地, default: false}
+  factions.claim.radius: {description: 以范围多少来圈地, default: false}
+  factions.create: {description: 创建一个新的公会, default: false}
+  factions.demote: {description: 贬职你公会里的成员, default: false}
+  factions.description: {description: 变更公会口号, default: false}
+  factions.disband: {description: 解散工会, default: false}
   factions.faction: {description: show faction information, default: false}
   factions.flag: {description: manage faction flags, default: false}
   factions.flag.set: {description: set faction flags, default: false}
