@@ -18,7 +18,7 @@ public class CmdFactionsName extends FCommand
 {
 	public CmdFactionsName()
 	{
-		this.addAliases("name");
+		this.addAliases("公会名称");
 		
 		this.addRequiredArg("new name");
 		

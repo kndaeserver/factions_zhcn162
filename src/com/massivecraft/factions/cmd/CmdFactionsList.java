@@ -17,9 +17,9 @@ public class CmdFactionsList extends FCommand
 {
 	public CmdFactionsList()
 	{
-		this.addAliases("l", "list");
+		this.addAliases("列表", "公会列表");
 		
-		this.addOptionalArg("page", "1");
+		this.addOptionalArg("页数", "1");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.LIST.node));
@@ -57,7 +57,11 @@ public class CmdFactionsList extends FCommand
 				lines.add(Txt.parse("<i>Factionless<i> %d 在线", FactionColls.get().get(sender).getNone().getUPlayersWhereOnline(true).size()));
 				continue;
 			}
+<<<<<<< HEAD
 			lines.add(Txt.parse("%s<i> %d/%d 在线, %d/%d/%d",
+=======
+			lines.add(Txt.parse("%s<i> %d/%d 在线, 已拥有%d块土地，目前可用能量值%d/%d",
+>>>>>>> 50a2dcc50ce7b9577345b6ca08d4e8b97691b6d3
 				faction.getName(usender),
 				faction.getUPlayersWhereOnline(true).size(),
 				faction.getUPlayers().size(),

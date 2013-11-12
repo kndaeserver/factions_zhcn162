@@ -9,7 +9,7 @@ public class CmdFactionsLeave extends FCommand {
 	
 	public CmdFactionsLeave()
 	{
-		this.addAliases("leave");
+		this.addAliases("Àë¿ª¹«»á");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.LEAVE.node));

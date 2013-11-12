@@ -14,9 +14,9 @@ public class CmdFactionsAutoClaim extends FCommand
 {
 	public CmdFactionsAutoClaim()
 	{
-		this.addAliases("autoclaim");
+		this.addAliases("自动圈地");
 		
-		this.addOptionalArg("faction", "you");
+		this.addOptionalArg("公会", "你");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.AUTOCLAIM.node));
