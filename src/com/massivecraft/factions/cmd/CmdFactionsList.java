@@ -25,52 +25,48 @@ public class CmdFactionsList extends FCommand
 		this.addRequirements(ReqHasPerm.get(Perm.LIST.node));
 	}
 
-	@Override
-	public void perform()
-	{
-		Integer pageHumanBased = this.arg(0, ARInteger.get(), 1);
-		if (pageHumanBased == null) return;
-		
-		// Create Messages
-		List<String> lines = new ArrayList<String>();
-		
-		ArrayList<Faction> factionList = new ArrayList<Faction>(FactionColls.get().get(sender).getAll(null, FactionListComparator.get()));
+    @Override
+    public void perform()
+    {
+            Integer pageHumanBased = this.arg(0, ARInteger.get(), 1);
+            if (pageHumanBased == null) return;
+            
+            // Create Messages
+            List<String> lines = new ArrayList<String>();
+            
+            ArrayList<Faction> factionList = new ArrayList<Faction>(FactionColls.get().get(sender).getAll(null, FactionListComparator.get()));
 
-		final int pageheight = 9;
-		
-		int pagecount = (factionList.size() / pageheight) + 1;
-		if (pageHumanBased > pagecount)
-			pageHumanBased = pagecount;
-		else if (pageHumanBased < 1)
-			pageHumanBased = 1;
-		int start = (pageHumanBased - 1) * pageheight;
-		int end = start + pageheight;
-		if (end > factionList.size())
-			end = factionList.size();
+            final int pageheight = 9;
+            
+            int pagecount = (factionList.size() / pageheight) + 1;
+            if (pageHumanBased > pagecount)
+                    pageHumanBased = pagecount;
+            else if (pageHumanBased < 1)
+                    pageHumanBased = 1;
+            int start = (pageHumanBased - 1) * pageheight;
+            int end = start + pageheight;
+            if (end > factionList.size())
+                    end = factionList.size();
 
-		lines.add(Txt.titleize("公会列表 "+pageHumanBased+"/"+pagecount));
+            lines.add(Txt.titleize("Faction List "+pageHumanBased+"/"+pagecount));
 
-		for (Faction faction : factionList.subList(start, end))
-		{
-			if (faction.isNone())
-			{
-				lines.add(Txt.parse("<i>Factionless<i> %d 在线", FactionColls.get().get(sender).getNone().getUPlayersWhereOnline(true).size()));
-				continue;
-			}
-<<<<<<< HEAD
-			lines.add(Txt.parse("%s<i> %d/%d 在线, %d/%d/%d",
-=======
-			lines.add(Txt.parse("%s<i> %d/%d 在线, 已拥有%d块土地，目前可用能量值%d/%d",
->>>>>>> 50a2dcc50ce7b9577345b6ca08d4e8b97691b6d3
-				faction.getName(usender),
-				faction.getUPlayersWhereOnline(true).size(),
-				faction.getUPlayers().size(),
-				faction.getLandCount(),
-				faction.getPowerRounded(),
-				faction.getPowerMaxRounded())
-			);
-		}
+            for (Faction faction : factionList.subList(start, end))
+            {
+                    if (faction.isNone())
+                    {
+                            lines.add(Txt.parse("<i>Factionless<i> %d online", FactionColls.get().get(sender).getNone().getUPlayersWhereOnline(true).size()));
+                            continue;
+                    }
+                    lines.add(Txt.parse("%s<i>公会在线 %d人，总%d人,目前拥有%d块领土，目前有%d/%d能量值",
+                            faction.getName(usender),
+                            faction.getUPlayersWhereOnline(true).size(),
+                            faction.getUPlayers().size(),
+                            faction.getLandCount(),
+                            faction.getPowerRounded(),
+                            faction.getPowerMaxRounded())
+                    );
+            }
 
-		sendMessage(lines);
-	}
+            sendMessage(lines);
+    }
 }

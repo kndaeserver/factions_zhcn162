@@ -55,8 +55,8 @@ public class CmdFactions extends FCommand
 		// TODO: When is this required? Should this be added to MCore?
 		this.aliases.removeAll(Collections.singletonList(null));
 		
-		this.setDesc("The faction base command");
-		this.setHelp("This command contains all faction stuff.");
+		this.setDesc("公会基本命令");
+		this.setHelp("公会管理与操作的所有命令如下。");
 		
 		this.addSubCommand(HelpCommand.get());
 		this.addSubCommand(this.cmdFactionsList);

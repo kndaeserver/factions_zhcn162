@@ -16,9 +16,9 @@ public class CmdFactionsPlayer extends FCommand
 {
 	public CmdFactionsPlayer()
 	{
-		this.addAliases("p", "player");
+		this.addAliases("p", "玩家", "玩家信息");
 		
-		this.addOptionalArg("player", "you");
+		this.addOptionalArg("默认玩家", "你");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.PLAYER.node));
@@ -32,7 +32,7 @@ public class CmdFactionsPlayer extends FCommand
 		if (uplayer == null) return;
 		
 		// INFO: Title
-		msg(Txt.titleize(Txt.upperCaseFirst(uplayer.getUniverse()) + " Player " + uplayer.describeTo(usender)));
+		msg(Txt.titleize(Txt.upperCaseFirst(uplayer.getUniverse()) + " 玩家 " + uplayer.describeTo(usender)));
 		
 		// INFO: Power (as progress bar)
 		double progressbarQuota = uplayer.getPower() / uplayer.getPowerMax();

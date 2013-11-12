@@ -28,7 +28,7 @@ public class CmdFactionsFaction extends FCommand
 {
 	public CmdFactionsFaction()
 	{
-		this.addAliases("f", "faction");
+		this.addAliases("口号", "公会口号");
 		
 		this.addOptionalArg("faction", "you");
 		
