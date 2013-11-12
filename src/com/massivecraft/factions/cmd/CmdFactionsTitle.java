@@ -17,10 +17,10 @@ public class CmdFactionsTitle extends FCommand
 {
 	public CmdFactionsTitle()
 	{
-		this.addAliases("title");
+		this.addAliases("头衔");
 		
-		this.addRequiredArg("player");
-		this.addOptionalArg("title", "");
+		this.addRequiredArg("玩家名");
+		this.addOptionalArg("头衔", "你填的内容");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.TITLE.node));

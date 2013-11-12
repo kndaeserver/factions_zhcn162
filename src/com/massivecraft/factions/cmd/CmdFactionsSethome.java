@@ -16,9 +16,9 @@ public class CmdFactionsSethome extends FCommand
 {
 	public CmdFactionsSethome()
 	{
-		this.addAliases("sethome");
+		this.addAliases("sethome","设置为家");
 		
-		this.addOptionalArg("faction", "you");
+		this.addOptionalArg("默认公会", "你在的");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqIsPlayer.get());

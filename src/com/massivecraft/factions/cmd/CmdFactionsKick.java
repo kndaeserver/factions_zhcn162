@@ -20,9 +20,9 @@ public class CmdFactionsKick extends FCommand
 	
 	public CmdFactionsKick()
 	{
-		this.addAliases("kick");
+		this.addAliases("kick","Ìß³ö");
 		
-		this.addRequiredArg("player");
+		this.addRequiredArg("Íæ¼ÒÃû");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.KICK.node));
@@ -51,7 +51,7 @@ public class CmdFactionsKick extends FCommand
 
 		if ( ! UConf.get(uplayer).canLeaveWithNegativePower && uplayer.getPower() < 0)
 		{
-			msg("<b>You cannot kick that member until their power is positive.");
+			msg("<b>.");
 			return;
 		}
 		

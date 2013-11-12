@@ -23,9 +23,9 @@ public class CmdFactionsCreate extends FCommand
 {
 	public CmdFactionsCreate()
 	{
-		this.addAliases("create");
+		this.addAliases("创建","创建公会");
 		
-		this.addRequiredArg("name");
+		this.addRequiredArg("公会名称");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasntFaction.get());

@@ -12,9 +12,9 @@ public class CmdFactionsOfficer extends FCommand
 {
 	public CmdFactionsOfficer()
 	{
-		this.addAliases("officer");
+		this.addAliases("公会助理","设置公会助理");
 		
-		this.addRequiredArg("player");
+		this.addRequiredArg("玩家名");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.OFFICER.node));
@@ -43,7 +43,7 @@ public class CmdFactionsOfficer extends FCommand
 
 		if (you == usender && !permAny)
 		{
-			msg("<b>目标不能是你自己.");
+			msg("<b>对象不能是你自己.");
 			return;
 		}
 

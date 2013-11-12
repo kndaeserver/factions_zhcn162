@@ -17,7 +17,7 @@ public class CmdFactionsList extends FCommand
 {
 	public CmdFactionsList()
 	{
-		this.addAliases("列表", "公会列表");
+		this.addAliases("l", "列表", "公会列表");
 		
 		this.addOptionalArg("页数", "1");
 		

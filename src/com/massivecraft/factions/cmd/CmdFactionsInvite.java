@@ -16,10 +16,10 @@ public class CmdFactionsInvite extends FCommand
 {
 	public CmdFactionsInvite()
 	{
-		this.addAliases("inv", "invite");
+		this.addAliases("inv", "邀请","邀请入会");
 		
-		this.addRequiredArg("player");
-		this.addOptionalArg("yes/no", "toggle");
+		this.addRequiredArg("玩家名");
+		this.addOptionalArg("是/否", "toggle");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.INVITE.node));

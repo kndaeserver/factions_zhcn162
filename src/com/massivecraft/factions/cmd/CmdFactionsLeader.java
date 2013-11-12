@@ -18,7 +18,7 @@ public class CmdFactionsLeader extends FCommand
 {	
 	public CmdFactionsLeader()
 	{
-		this.addAliases("leader");
+		this.addAliases("会长","设置会长");
 		
 		this.addRequiredArg("player");
 		this.addOptionalArg("faction", "you");

@@ -18,10 +18,10 @@ public class CmdFactionsJoin extends FCommand
 {
 	public CmdFactionsJoin()
 	{
-		this.addAliases("join");
+		this.addAliases("join", "加入","加入公会");
 		
-		this.addRequiredArg("faction");
-		this.addOptionalArg("player", "you");
+		this.addRequiredArg("公会");
+		this.addOptionalArg("玩家", "你");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.JOIN.node));

@@ -11,9 +11,9 @@ public class CmdFactionsPromote extends FCommand
 {
 	public CmdFactionsPromote()
 	{
-		this.addAliases("promote");
+		this.addAliases("提升","提升等级");
 		
-		this.addRequiredArg("player");
+		this.addRequiredArg("玩家名");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.PROMOTE.node));
@@ -37,7 +37,7 @@ public class CmdFactionsPromote extends FCommand
 		
 		if (you == usender)
 		{
-			msg("<b>目标不能是你自己.");
+			msg("<b>提升成员不能是你自己.");
 			return;
 		}
 

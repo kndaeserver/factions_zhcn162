@@ -13,9 +13,9 @@ public class CmdFactionsOpen extends FCommand
 {
 	public CmdFactionsOpen()
 	{
-		this.addAliases("open");
+		this.addAliases("open","公开","公开公会");
 		
-		this.addOptionalArg("yes/no", "toggle");
+		this.addOptionalArg("是/否", "toggle");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.OPEN.node));

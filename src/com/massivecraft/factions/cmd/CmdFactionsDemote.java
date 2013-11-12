@@ -12,9 +12,9 @@ public class CmdFactionsDemote extends FCommand
 	
 	public CmdFactionsDemote()
 	{
-		this.addAliases("demote");
+		this.addAliases("贬职","降低等级");
 		
-		this.addRequiredArg("player");
+		this.addRequiredArg("玩家名");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.DEMOTE.node));
@@ -38,7 +38,7 @@ public class CmdFactionsDemote extends FCommand
 		
 		if (you == usender)
 		{
-			msg("<b>目标不能是你自己.");
+			msg("<b>对象不能是你自己.");
 			return;
 		}
 
