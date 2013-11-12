@@ -16,7 +16,7 @@ public class CmdFactions extends FCommand
 	public CmdFactionsJoin cmdFactionsJoin = new CmdFactionsJoin();
 	public CmdFactionsLeave cmdFactionsLeave = new CmdFactionsLeave();
 	public CmdFactionsHome cmdFactionsHome = new CmdFactionsHome();
-	public CmdFactionsMap cmdFactionsMap = new CmdFactionsMap();
+	//public CmdFactionsMap cmdFactionsMap = new CmdFactionsMap();
 	public CmdFactionsCreate cmdFactionsCreate = new CmdFactionsCreate();
 	public CmdFactionsName cmdFactionsName = new CmdFactionsName();
 	public CmdFactionsDescription cmdFactionsDescription = new CmdFactionsDescription();
@@ -65,7 +65,7 @@ public class CmdFactions extends FCommand
 		this.addSubCommand(this.cmdFactionsJoin);
 		this.addSubCommand(this.cmdFactionsLeave);
 		this.addSubCommand(this.cmdFactionsHome);
-		this.addSubCommand(this.cmdFactionsMap);
+		//this.addSubCommand(this.cmdFactionsMap);
 		this.addSubCommand(this.cmdFactionsCreate);
 		this.addSubCommand(this.cmdFactionsName);
 		this.addSubCommand(this.cmdFactionsDescription);
