@@ -16,7 +16,7 @@ public class CmdFactionsSeeChunk extends FCommand
 {
 	public CmdFactionsSeeChunk()
 	{
-		this.addAliases("sc", "seechunk");
+		this.addAliases("sc", "²é¿´Çø¿é");
 		
 		//this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.SEE_CHUNK.node));
