@@ -28,9 +28,9 @@ public class CmdFactionsFaction extends FCommand
 {
 	public CmdFactionsFaction()
 	{
-		this.addAliases("口号", "公会口号");
+		this.addAliases("f","公会", "公会信息");
 		
-		this.addOptionalArg("faction", "you");
+		this.addOptionalArg("公会", "y你");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.FACTION.node));
@@ -52,7 +52,7 @@ public class CmdFactionsFaction extends FCommand
 		msg(Txt.titleize(Txt.upperCaseFirst(faction.getUniverse()) + " 公会 " + faction.getName(usender)));
 		
 		// INFO: Description
-		msg("<a>描述: <i>%s", faction.getDescription());	
+		msg("<a>口号: <i>%s", faction.getDescription());	
 		
 		if (normal)
 		{
@@ -112,7 +112,7 @@ public class CmdFactionsFaction extends FCommand
 			
 			if (faction.getFlag(FFlag.PEACEFUL))
 			{
-				msg("<a>This faction is peaceful - in truce with everyone.");
+				msg("<a>这个公会是和平的 - 进入此地，请休战.");
 			}
 		}
 		

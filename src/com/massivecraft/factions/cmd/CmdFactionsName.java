@@ -18,9 +18,9 @@ public class CmdFactionsName extends FCommand
 {
 	public CmdFactionsName()
 	{
-		this.addAliases("鍏細鍚嶇О");
+		this.addAliases("n", "名称", "公会名称");
 		
-		this.addRequiredArg("new name");
+		this.addRequiredArg("新公会名称");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.NAME.node));
