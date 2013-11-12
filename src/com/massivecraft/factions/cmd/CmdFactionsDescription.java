@@ -13,9 +13,9 @@ public class CmdFactionsDescription extends FCommand
 {
 	public CmdFactionsDescription()
 	{
-		this.addAliases("desc");
+		this.addAliases("desc", "口号", "公会口号");
 		
-		this.addRequiredArg("desc");
+		this.addRequiredArg("公会口号");
 		this.setErrorOnToManyArgs(false);
 		
 		this.addRequirements(ReqFactionsEnabled.get());
