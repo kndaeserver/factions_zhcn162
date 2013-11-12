@@ -13,7 +13,7 @@ public class CmdFactionsUnclaim extends FCommand
 {
 	public CmdFactionsUnclaim()
 	{
-		this.addAliases("unclaim");
+		this.addAliases("È¡ÏûÈ¦µØ");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.UNCLAIM.node));

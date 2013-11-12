@@ -20,10 +20,10 @@ public class CmdFactionsMoneyDeposit extends FCommand
 {
 	public CmdFactionsMoneyDeposit()
 	{
-		this.addAliases("d", "deposit");
+		this.addAliases("d", "存款");
 		
-		this.addRequiredArg("amount");
-		this.addOptionalArg("faction", "you");
+		this.addRequiredArg("数值");
+		this.addOptionalArg("默认公会", "你的");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.MONEY_DEPOSIT.node));
@@ -43,7 +43,7 @@ public class CmdFactionsMoneyDeposit extends FCommand
 		
 		if (success && MConf.get().logMoneyTransactions)
 		{
-			Factions.get().log(ChatColor.stripColor(Txt.parse("%s deposited %s in the faction bank: %s", usender.getName(), Money.format(usender, amount), faction.describeTo(null))));
+			Factions.get().log(ChatColor.stripColor(Txt.parse("%s 存入 %s 到公会的银行: %s", usender.getName(), Money.format(usender, amount), faction.describeTo(null))));
 		}
 	}
 	

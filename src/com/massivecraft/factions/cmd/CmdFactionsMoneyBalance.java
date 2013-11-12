@@ -12,9 +12,9 @@ public class CmdFactionsMoneyBalance extends FCommand
 {
 	public CmdFactionsMoneyBalance()
 	{
-		this.addAliases("b", "balance");
+		this.addAliases("b", "Óà¶î");
 		
-		this.addOptionalArg("faction", "you");
+		this.addOptionalArg("Ä¬ÈÏ¹«»á", "Äã");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.MONEY_BALANCE.node));

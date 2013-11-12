@@ -30,7 +30,7 @@ public class CmdFactionsFaction extends FCommand
 	{
 		this.addAliases("f","公会", "公会信息");
 		
-		this.addOptionalArg("公会", "y你");
+		this.addOptionalArg("默认公会", "你所在的");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.FACTION.node));

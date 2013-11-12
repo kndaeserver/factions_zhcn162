@@ -22,7 +22,7 @@ public class CmdFactionsUnclaimall extends FCommand
 {	
 	public CmdFactionsUnclaimall()
 	{
-		this.addAliases("unclaimall");
+		this.addAliases("取消所有圈地");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.UNCLAIM_ALL.node));

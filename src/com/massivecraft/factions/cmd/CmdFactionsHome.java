@@ -26,7 +26,7 @@ public class CmdFactionsHome extends FCommand
 {
 	public CmdFactionsHome()
 	{
-		this.addAliases("home");
+		this.addAliases("home","»Ø¼Ò");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.HOME.node));

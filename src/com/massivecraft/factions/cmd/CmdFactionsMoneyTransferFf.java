@@ -20,11 +20,11 @@ public class CmdFactionsMoneyTransferFf extends FCommand
 {
 	public CmdFactionsMoneyTransferFf()
 	{
-		this.addAliases("ff");
+		this.addAliases("ff","公对公","公会转账到公会");
 		
-		this.addRequiredArg("amount");
-		this.addRequiredArg("faction");
-		this.addRequiredArg("faction");
+		this.addRequiredArg("数值");
+		this.addRequiredArg("公会名");
+		this.addRequiredArg("公会名");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.MONEY_F2F.node));

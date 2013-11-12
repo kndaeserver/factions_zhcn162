@@ -17,7 +17,7 @@ public class CmdFactionsMoney extends FCommand
 	
 	public CmdFactionsMoney()
 	{
-		this.addAliases("money");
+		this.addAliases("ÒøÐÐ");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqBankCommandsEnabled.get());

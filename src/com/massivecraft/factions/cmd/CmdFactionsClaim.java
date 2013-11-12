@@ -18,7 +18,7 @@ public class CmdFactionsClaim extends FCommand
 	
 	public CmdFactionsClaim()
 	{
-		this.addAliases("claim");
+		this.addAliases("ศฆตุ");
 		
 		this.addOptionalArg("radius", "1");
 		this.addOptionalArg("faction", "you");

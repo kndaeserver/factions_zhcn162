@@ -22,11 +22,11 @@ public class CmdFactionsMoneyTransferFp extends FCommand
 {
 	public CmdFactionsMoneyTransferFp()
 	{
-		this.addAliases("fp");
+		this.addAliases("fp","公对私","公会转账到个人");
 		
-		this.addRequiredArg("amount");
-		this.addRequiredArg("faction");
-		this.addRequiredArg("player");
+		this.addRequiredArg("数值");
+		this.addRequiredArg("公会名");
+		this.addRequiredArg("玩家名");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.MONEY_F2P.node));
