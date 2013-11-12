@@ -22,19 +22,19 @@ permissions:
   factions.demote: {description: 贬职你公会里的成员, default: false}
   factions.description: {description: 变更公会口号, default: false}
   factions.disband: {description: 解散工会, default: false}
-  factions.faction: {description: show faction information, default: false}
+  factions.faction: {description: 显示所属公会信息, default: false}
   factions.flag: {description: manage faction flags, default: false}
   factions.flag.set: {description: set faction flags, default: false}
-  factions.home: {description: teleport to faction home, default: false}
+  factions.home: {description: 返回公会传送点, default: false}
   factions.invite: {description: set if player is invited, default: false}
-  factions.join: {description: join faction, default: false}
-  factions.join.any: {description: join closed faction, default: false}
+  factions.join: {description: 加入一个公会, default: false}
+  factions.join.any: {description: 加入一个封闭的公会, default: false}
   factions.join.others: {description: have another player join faction, default: false}
   factions.kick: {description: kick player from faction, default: false}
   factions.leader: {description: set leader for faction, default: false}
   factions.leader.any: {description: set leader for another faction, default: false}
-  factions.leave: {description: leave your faction, default: false}
-  factions.list: {description: list all factions, default: false}
+  factions.leave: {description: 离开你在的公会, default: false}
+  factions.list: {description: 列出所有公会, default: false}
   factions.map: {description: show territory map, default: false}
   factions.money: {description: manage faction money, default: false}
   factions.money.balance: {description: show faction money, default: false}
@@ -48,7 +48,7 @@ permissions:
   factions.officer.any: {description: set officers for another faction, default: false}
   factions.open: {description: set if invitation is required to join, default: false}
   factions.perm: {description: change faction permissions, default: false}
-  factions.player: {description: show player information}
+  factions.player: {description: 显示个人信息或者其他玩家的信息}
   factions.powerboost: {description: set powerboost, default: false}
   factions.promote: {description: promote lesser members in your faction, default: false}
   factions.relation: {description: set relation wish to another faction, default: false}
