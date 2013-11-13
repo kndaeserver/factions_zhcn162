@@ -3,7 +3,7 @@ name: Factions
 version: 2.1.0
 website: http://massivecraft.com/factions
 authors: [Cayorion, Brettflan]
-description: Â§eFactions allows the players to team up and claim land as their own and start wars with other factions. This way we hope to inspire politics, intrigue, and team spirit. Â§aCayorion Â§efrom the minecraft server Â§aMassiveCraft Â§eis the lead Factions programmer. Feel free to visit us at Â§bhttp://massivecraft.com
+description: æ‚eFactions allows the players to team up and claim land as their own and start wars with other factions. This way we hope to inspire politics, intrigue, and team spirit. æ‚aCayorion æ‚efrom the minecraft server æ‚aMassiveCraft æ‚eis the lead Factions programmer. Feel free to visit us at æ‚bhttp://massivecraft.com
 depend: [mcore]
 softdepend: [PermissionsEx, Permissions, Essentials, EssentialsChat, HeroChat, iChat, LocalAreaChat, LWC, nChat, ChatManager, AuthMe, Vault, Spout, WorldEdit, WorldGuard, AuthDB, CaptureThePoints, CombatTag]
 permissions:
@@ -14,52 +14,52 @@ permissions:
   factions.access.faction: {description: grant faction access, with the proper fperm, default: false}
   factions.access.player: {description: grant player access, with the proper fperm, default: false}
   factions.access.view: {description: view access, default: false}
-  factions.admin: {description: ÊÇ·ñÔÊĞí¹ÜÀíÔ±Ä£Ê½, default: false}
-  factions.autoclaim: {description: µ±ÄãÔÚ×ßÂ·µÄÊ±ºò×Ô¶¯È¦µØÕ¼Áì, default: false}
-  factions.claim: {description: ÔÚÄãÕ¾µÄµØ·½È¦µØ, default: false}
-  factions.claim.radius: {description: ÒÔ·¶Î§¶àÉÙÀ´È¦µØ, default: false}
-  factions.create: {description: ´´½¨Ò»¸öĞÂµÄ¹«»á, default: false}
-  factions.demote: {description: ±áÖ°Äã¹«»áÀïµÄ³ÉÔ±, default: false}
-  factions.description: {description: ±ä¸ü¹«»á¿ÚºÅ, default: false}
-  factions.disband: {description: ½âÉ¢¹¤»á, default: false}
-  factions.faction: {description: ÏÔÊ¾ËùÊô¹«»áĞÅÏ¢, default: false}
-  factions.flag: {description: ¹ÜÀí¹«»áflags, default: false}
-  factions.flag.set: {description: ÉèÖÃ¹«»áflags, default: false}
-  factions.home: {description: ·µ»Ø¹«»á´«ËÍµã, default: false}
-  factions.invite: {description: ÑûÇëÄ³Íæ¼Ò¼ÓÈë¹«»á, default: false}
-  factions.join: {description: ¼ÓÈëÒ»¸ö¹«»á, default: false}
-  factions.join.any: {description: ¼ÓÈëÒ»¸ö·â±ÕµÄ¹«»á, default: false}
+  factions.admin: {description: æ˜¯å¦å…è®¸ç®¡ç†å‘˜æ¨¡å¼, default: false}
+  factions.autoclaim: {description: å½“ä½ åœ¨èµ°è·¯çš„æ—¶å€™è‡ªåŠ¨åœˆåœ°å é¢†, default: false}
+  factions.claim: {description: åœ¨ä½ ç«™çš„åœ°æ–¹åœˆåœ°, default: false}
+  factions.claim.radius: {description: ä»¥èŒƒå›´å¤šå°‘æ¥åœˆåœ°, default: false}
+  factions.create: {description: åˆ›å»ºä¸€ä¸ªæ–°çš„å…¬ä¼š, default: false}
+  factions.demote: {description: è´¬èŒä½ å…¬ä¼šé‡Œçš„æˆå‘˜, default: false}
+  factions.description: {description: å˜æ›´å…¬ä¼šå£å·, default: false}
+  factions.disband: {description: è§£æ•£å·¥ä¼š, default: false}
+  factions.faction: {description: æ˜¾ç¤ºæ‰€å±å…¬ä¼šä¿¡æ¯, default: false}
+  factions.flag: {description: ç®¡ç†å…¬ä¼šflags, default: false}
+  factions.flag.set: {description: è®¾ç½®å…¬ä¼šflags, default: false}
+  factions.home: {description: è¿”å›å…¬ä¼šä¼ é€ç‚¹, default: false}
+  factions.invite: {description: é‚€è¯·æŸç©å®¶åŠ å…¥å…¬ä¼š, default: false}
+  factions.join: {description: åŠ å…¥ä¸€ä¸ªå…¬ä¼š, default: false}
+  factions.join.any: {description: åŠ å…¥ä¸€ä¸ªå°é—­çš„å…¬ä¼š, default: false}
   factions.join.others: {description: have another player join faction, default: false}
-  factions.kick: {description: ´Ó¹«»áÖĞÌß³öÄ³Íæ¼Ò, default: false}
-  factions.leader: {description: ÉèÖÃ¹«»á»á³¤, default: false}
-  factions.leader.any: {description: ÉèÖÃ±ğµÄ¹«»á»á³¤, default: false}
-  factions.leave: {description: Àë¿ªÄãÔÚµÄ¹«»á, default: false}
-  factions.list: {description: ÁĞ³öËùÓĞ¹«»á, default: false}
-  factions.map: {description: ÏÔÊ¾ÁìµØµØÍ¼, default: false}
-  factions.money: {description: ¹ÜÀí¹«»á×Ê½ğ, default: false}
-  factions.money.balance: {description: ÏÔÊ¾¹«»á×Ê½ğ, default: false}
-  factions.money.balance.any: {description: ÏÔÊ¾ÆäËû¹«»áµÄ¹«»á×Ê½ğ, default: false}
-  factions.money.deposit: {description: Ïò¹«»áÒøĞĞ´æ¿î, default: false}
-  factions.money.f2f: {description: »®²¦×Ê½ğ ¹«»á --> ¹«»á, default: false}
-  factions.money.f2p: {description: »®²¦×Ê½ğ ¹«»á --> Íæ¼Ò, default: false}
-  factions.money.p2f: {description: »®²¦×Ê½ğ Íæ¼Ò --> ¹«»á, default: false}
-  factions.money.withdraw: {description: ´Ó¹«»áÒøĞĞÈ¡¿î, default: false}
-  factions.officer: {description: ÈÎÃü¹«»áÖúÀí, default: false}
-  factions.officer.any: {description: ÉèÖÃÆäËû¹«»áµÄ¹«»áÖúÀí, default: false}
-  factions.open: {description: ÉèÖÃÊÇ·ñĞèÒªÑûÇë¼ÓÈë¹«»á, default: false}
-  factions.perm: {description: ±ä¸ü¹«»áÈ¨ÏŞ, default: false}
-  factions.player: {description: ÏÔÊ¾¸öÈËĞÅÏ¢»òÕßÆäËûÍæ¼ÒµÄĞÅÏ¢}
-  factions.powerboost: {description: ÉèÖÃÄÜÁ¿ÌáÉı, default: false}
-  factions.promote: {description: ÌáÉı¹«»áÖĞµÄ»áÔ±Ö°Îñ, default: false}
-  factions.relation: {description: ÉèÖÃÓë±ğµÄ¹«»áµÄ¹ØÏµ, default: false}
+  factions.kick: {description: ä»å…¬ä¼šä¸­è¸¢å‡ºæŸç©å®¶, default: false}
+  factions.leader: {description: è®¾ç½®å…¬ä¼šä¼šé•¿, default: false}
+  factions.leader.any: {description: è®¾ç½®åˆ«çš„å…¬ä¼šä¼šé•¿, default: false}
+  factions.leave: {description: ç¦»å¼€ä½ åœ¨çš„å…¬ä¼š, default: false}
+  factions.list: {description: åˆ—å‡ºæ‰€æœ‰å…¬ä¼š, default: false}
+  factions.map: {description: æ˜¾ç¤ºé¢†åœ°åœ°å›¾, default: false}
+  factions.money: {description: ç®¡ç†å…¬ä¼šèµ„é‡‘, default: false}
+  factions.money.balance: {description: æ˜¾ç¤ºå…¬ä¼šèµ„é‡‘, default: false}
+  factions.money.balance.any: {description: æ˜¾ç¤ºå…¶ä»–å…¬ä¼šçš„å…¬ä¼šèµ„é‡‘, default: false}
+  factions.money.deposit: {description: å‘å…¬ä¼šé“¶è¡Œå­˜æ¬¾, default: false}
+  factions.money.f2f: {description: åˆ’æ‹¨èµ„é‡‘ å…¬ä¼š --> å…¬ä¼š, default: false}
+  factions.money.f2p: {description: åˆ’æ‹¨èµ„é‡‘ å…¬ä¼š --> ç©å®¶, default: false}
+  factions.money.p2f: {description: åˆ’æ‹¨èµ„é‡‘ ç©å®¶ --> å…¬ä¼š, default: false}
+  factions.money.withdraw: {description: ä»å…¬ä¼šé“¶è¡Œå–æ¬¾, default: false}
+  factions.officer: {description: ä»»å‘½å…¬ä¼šåŠ©ç†, default: false}
+  factions.officer.any: {description: è®¾ç½®å…¶ä»–å…¬ä¼šçš„å…¬ä¼šåŠ©ç†, default: false}
+  factions.open: {description: è®¾ç½®æ˜¯å¦éœ€è¦é‚€è¯·åŠ å…¥å…¬ä¼š, default: false}
+  factions.perm: {description: å˜æ›´å…¬ä¼šæƒé™, default: false}
+  factions.player: {description: æ˜¾ç¤ºä¸ªäººä¿¡æ¯æˆ–è€…å…¶ä»–ç©å®¶çš„ä¿¡æ¯}
+  factions.powerboost: {description: è®¾ç½®èƒ½é‡æå‡, default: false}
+  factions.promote: {description: æå‡å…¬ä¼šä¸­çš„ä¼šå‘˜èŒåŠ¡, default: false}
+  factions.relation: {description: è®¾ç½®ä¸åˆ«çš„å…¬ä¼šçš„å…³ç³», default: false}
   factions.seechunk: {description: see the chunk you stand in, default: false}
-  factions.sethome: {description: ÉèÖÃ¹«»á»Ø³Çµã, default: false}
-  factions.name: {description: ÉèÖÃ¹«»áÃû³Æ, default: false}
-  factions.title: {description: ÉèÖÃÍæ¼ÒÍ·ÏÎ, default: false}
-  factions.title.color: {description: ÉèÖÃÍæ¼ÒÍ·ÏÎµÄÑÕÉ«, default: false}
-  factions.unclaim: {description: ÊÍ·ÅÄã½ÅÏÂµÄÁìÍÁ, default: false}
-  factions.unclaimall: {description: ÊÍ·ÅËùÓĞÁìÍÁ, default: false}
-  factions.version: {description: ²é¿´²å¼ş°æ±¾, default: false}
+  factions.sethome: {description: è®¾ç½®å…¬ä¼šå›åŸç‚¹, default: false}
+  factions.name: {description: è®¾ç½®å…¬ä¼šåç§°, default: false}
+  factions.title: {description: è®¾ç½®ç©å®¶å¤´è¡”, default: false}
+  factions.title.color: {description: è®¾ç½®ç©å®¶å¤´è¡”çš„é¢œè‰², default: false}
+  factions.unclaim: {description: é‡Šæ”¾ä½ è„šä¸‹çš„é¢†åœŸ, default: false}
+  factions.unclaimall: {description: é‡Šæ”¾æ‰€æœ‰é¢†åœŸ, default: false}
+  factions.version: {description: æŸ¥çœ‹æ’ä»¶ç‰ˆæœ¬, default: false}
 # -------------------------------------------- #
 # STAR NOTATION
 # -------------------------------------------- #
