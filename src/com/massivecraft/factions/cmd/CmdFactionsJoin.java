@@ -49,7 +49,7 @@ public class CmdFactionsJoin extends FCommand
 
 		if (faction == uplayerFaction)
 		{
-			msg("<i>%s <i>%s 已经是 %s<i> 工会的成员.", uplayer.describeTo(usender, true), (samePlayer ? "are" : "is"), faction.getName(usender));
+			msg("<i>%s <i>%s 已经是 %s<i> 公会的成员.", uplayer.describeTo(usender, true), (samePlayer ? "are" : "is"), faction.getName(usender));
 			return;
 		}
 
