@@ -24,21 +24,21 @@ public enum FPerm
 	// ENUM
 	// -------------------------------------------- //
 	
-	BUILD(true, "build", "ç¼–è¾‘åœ°å½¢",              Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.ALLY),
-	PAINBUILD(true, "painbuild", "ç¼–è¾‘, ç ´å"),
-	DOOR(true, "door", "ä½¿ç”¨é—¨",                       Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
-	BUTTON(true, "button", "ä½¿ç”¨æŒ‰é’®",           Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
-	LEVER(true, "lever", "ä½¿ç”¨æ‹‰æ†",                    Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
-	CONTAINER(true, "container", "ä½¿ç”¨å®¹å™¨",        Rel.LEADER, Rel.OFFICER, Rel.MEMBER),
+	BUILD(true, "build", "±à¼­µØĞÎ",              Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.ALLY),
+	PAINBUILD(true, "painbuild", "±à¼­, ÆÆ»µ"),
+	DOOR(true, "door", "Ê¹ÓÃÃÅ",                       Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
+	BUTTON(true, "button", "Ê¹ÓÃ°´Å¥",           Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
+	LEVER(true, "lever", "Ê¹ÓÃÀ­¸Ë",                    Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
+	CONTAINER(true, "container", "Ê¹ÓÃÈİÆ÷",        Rel.LEADER, Rel.OFFICER, Rel.MEMBER),
 	
-	INVITE(false, "invite", "é‚€è¯·ç©å®¶",             Rel.LEADER, Rel.OFFICER),
-	KICK(false, "kick", "å¼€é™¤ä¼šå‘˜",                   Rel.LEADER, Rel.OFFICER),
-	SETHOME(false, "sethome", "è®¾ç½®å›åŸç‚¹",             Rel.LEADER, Rel.OFFICER),
-	WITHDRAW(false, "withdraw", "å–é’±",         Rel.LEADER, Rel.OFFICER),
-	TERRITORY(false, "territory", "åœˆåœ°æˆ–æ”¾å¼ƒé¢†åœ°",     Rel.LEADER, Rel.OFFICER),
+	INVITE(false, "invite", "ÑûÇëÍæ¼Ò",             Rel.LEADER, Rel.OFFICER),
+	KICK(false, "kick", "¿ª³ı»áÔ±",                   Rel.LEADER, Rel.OFFICER),
+	SETHOME(false, "sethome", "ÉèÖÃ»Ø³Çµã",             Rel.LEADER, Rel.OFFICER),
+	WITHDRAW(false, "withdraw", "È¡Ç®",         Rel.LEADER, Rel.OFFICER),
+	TERRITORY(false, "territory", "È¦µØ»ò·ÅÆúÁìµØ",     Rel.LEADER, Rel.OFFICER),
 	ACCESS(false, "access", "grant territory",            Rel.LEADER, Rel.OFFICER),
-	DISBAND(false, "disband", "è§£æ•£å…¬ä¼š",      Rel.LEADER),
-	PERMS(false, "perms", "ç®¡ç†æƒé™",           Rel.LEADER),
+	DISBAND(false, "disband", "½âÉ¢¹«»á",      Rel.LEADER),
+	PERMS(false, "perms", "¹ÜÀíÈ¨ÏŞ",           Rel.LEADER),
 	
 	// END OF LIST
 	;
@@ -127,10 +127,10 @@ public enum FPerm
 	
 	public String createDeniedMessage(UPlayer uplayer, Faction hostFaction)
 	{
-		String ret = Txt.parse("%s<b> ä¸å…è®¸ä½  %s<b>.", hostFaction.describeTo(uplayer, true), this.getDescription());
+		String ret = Txt.parse("%s<b> ²»ÔÊĞíÄã %s<b>.", hostFaction.describeTo(uplayer, true), this.getDescription());
 		if (Perm.ADMIN.has(uplayer.getPlayer()))
 		{
-			ret += Txt.parse("\n<i>ä½ ä¸èƒ½è¶Šæƒä½¿ç”¨ " + Factions.get().getOuterCmdFactions().cmdFactionsAdmin.getUseageTemplate(false));
+			ret += Txt.parse("\n<i>Äã²»ÄÜÔ½È¨Ê¹ÓÃ " + Factions.get().getOuterCmdFactions().cmdFactionsAdmin.getUseageTemplate(false));
 		}
 		return ret;
 	}
@@ -201,11 +201,11 @@ public enum FPerm
 		{
 			if (value.contains(rel))
 			{
-				ret += "<g>æ˜¯";
+				ret += "<g>ÊÇ";
 			}
 			else
 			{
-				ret += "<b>å¦";
+				ret += "<b>·ñ";
 			}
 			ret += " ";
 		}
