@@ -24,21 +24,21 @@ public enum FPerm
 	// ENUM
 	// -------------------------------------------- //
 	
-	BUILD(true, "build", "edit the terrain",              Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.ALLY),
-	PAINBUILD(true, "painbuild", "edit, take damage"),
-	DOOR(true, "door", "use doors",                       Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
-	BUTTON(true, "button", "use stone buttons",           Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
-	LEVER(true, "lever", "use levers",                    Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
-	CONTAINER(true, "container", "use containers",        Rel.LEADER, Rel.OFFICER, Rel.MEMBER),
+	BUILD(true, "build", "编辑地形",              Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.ALLY),
+	PAINBUILD(true, "painbuild", "编辑, 破坏"),
+	DOOR(true, "door", "使用门",                       Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
+	BUTTON(true, "button", "使用按钮",           Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
+	LEVER(true, "lever", "使用拉杆",                    Rel.LEADER, Rel.OFFICER, Rel.MEMBER, Rel.RECRUIT, Rel.ALLY),
+	CONTAINER(true, "container", "使用容器",        Rel.LEADER, Rel.OFFICER, Rel.MEMBER),
 	
-	INVITE(false, "invite", "invite players",             Rel.LEADER, Rel.OFFICER),
-	KICK(false, "kick", "kick members",                   Rel.LEADER, Rel.OFFICER),
-	SETHOME(false, "sethome", "set the home",             Rel.LEADER, Rel.OFFICER),
-	WITHDRAW(false, "withdraw", "withdraw money",         Rel.LEADER, Rel.OFFICER),
-	TERRITORY(false, "territory", "claim or unclaim",     Rel.LEADER, Rel.OFFICER),
+	INVITE(false, "invite", "邀请玩家",             Rel.LEADER, Rel.OFFICER),
+	KICK(false, "kick", "开除会员",                   Rel.LEADER, Rel.OFFICER),
+	SETHOME(false, "sethome", "设置回城点",             Rel.LEADER, Rel.OFFICER),
+	WITHDRAW(false, "withdraw", "取钱",         Rel.LEADER, Rel.OFFICER),
+	TERRITORY(false, "territory", "圈地或放弃领地",     Rel.LEADER, Rel.OFFICER),
 	ACCESS(false, "access", "grant territory",            Rel.LEADER, Rel.OFFICER),
-	DISBAND(false, "disband", "disband the faction",      Rel.LEADER),
-	PERMS(false, "perms", "manage permissions",           Rel.LEADER),
+	DISBAND(false, "disband", "解散公会",      Rel.LEADER),
+	PERMS(false, "perms", "管理权限",           Rel.LEADER),
 	
 	// END OF LIST
 	;
@@ -127,10 +127,10 @@ public enum FPerm
 	
 	public String createDeniedMessage(UPlayer uplayer, Faction hostFaction)
 	{
-		String ret = Txt.parse("%s<b> does not allow you to %s<b>.", hostFaction.describeTo(uplayer, true), this.getDescription());
+		String ret = Txt.parse("%s<b> 不允许你 %s<b>.", hostFaction.describeTo(uplayer, true), this.getDescription());
 		if (Perm.ADMIN.has(uplayer.getPlayer()))
 		{
-			ret += Txt.parse("\n<i>You can bypass by using " + Factions.get().getOuterCmdFactions().cmdFactionsAdmin.getUseageTemplate(false));
+			ret += Txt.parse("\n<i>你不能越权使用 " + Factions.get().getOuterCmdFactions().cmdFactionsAdmin.getUseageTemplate(false));
 		}
 		return ret;
 	}
@@ -201,11 +201,11 @@ public enum FPerm
 		{
 			if (value.contains(rel))
 			{
-				ret += "<g>YES";
+				ret += "<g>是";
 			}
 			else
 			{
-				ret += "<b>NOO";
+				ret += "<b>否";
 			}
 			ret += " ";
 		}

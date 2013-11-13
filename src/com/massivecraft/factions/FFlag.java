@@ -20,21 +20,21 @@ public enum FFlag
 	// -------------------------------------------- //
 	
 	// Faction flags
-	PERMANENT("permanent", "<i>A permanent faction will never be deleted.", false),
-	PEACEFUL("peaceful", "<i>Allways in truce with other factions.", false),
-	INFPOWER("infpower", "<i>This flag gives the faction infinite power.", false),
+	PERMANENT("永久", "<i>永久公会无法被解散.", false),
+	PEACEFUL("和平", "<i>与其他公会始终处于休战状态.", false),
+	INFPOWER("无限能量", "<i>这个标记可以给你的公会无限能量.", false),
 	// This faction has infinite power: TODO: Add faction has enough method. Replace the permanentpower level 
 	
 	// (Faction) Territory flags
 	// If a faction later could have many different territories this would probably be in another enum
-	POWERLOSS("powerloss", "<i>Is power lost on death in this territory?", true),
-	PVP("pvp", "<i>Can you PVP in territory?", true),
-	FRIENDLYFIRE("friendlyfire", "<i>Can friends hurt eachother here?", false),
-	MONSTERS("monsters", "<i>Can monsters spawn in this territory?", true),
-	EXPLOSIONS("explosions", "<i>Can explosions occur in this territory?", true),
-	OFFLINE_EXPLOSIONS("offlineexplosions", "<i>Can explosions occur if faction is offline?", false),
-	FIRESPREAD("firespread", "<i>Can fire spread in territory?", true),
-	ENDERGRIEF("endergrief", "<i>Can endermen grief in this territory?", false),
+	POWERLOSS("能量掉落", "<i>在领地上死亡是否掉落能量值?", true),
+	PVP("pvp", "<i>在领地上是否可以PVP?", true),
+	FRIENDLYFIRE("队友伤害", "<i>是否开启队友伤害?", false),
+	MONSTERS("怪物", "<i>领地上是否允许刷怪?", true),
+	EXPLOSIONS("爆炸", "<i>领地上是否允许爆炸?", true),
+	OFFLINE_EXPLOSIONS("离线爆炸", "<i>是否允许公会离线时发生爆炸?", false),
+	FIRESPREAD("火势蔓延", "<i>领地上是否允许火焰蔓延?", true),
+	ENDERGRIEF("刷新小黑", "<i>是否允许小黑在领地内游荡?", false),
 	
 	// END OF LIST
 	;
@@ -111,7 +111,7 @@ public enum FFlag
 	
 	public String getStateInfo(boolean value, boolean withDesc)
 	{
-		String ret = (value ? "<g>YES" : "<b>NOO") + "<c> " + this.getNicename();
+		String ret = (value ? "<g>是" : "<b>否") + "<c> " + this.getNicename();
 		if (withDesc)
 		{
 			ret += " " + this.getDescription();

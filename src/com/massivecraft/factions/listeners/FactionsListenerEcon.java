@@ -87,7 +87,7 @@ public class FactionsListenerEcon implements Listener
 		
 		Econ.transferMoney(usender, faction, usender, amount, true);
 		
-		usender.msg("<i>You have been given the disbanded faction's bank, totaling %s.", amountString);
+		usender.msg("<i>你已经解散了公会银行, 总数 %s.", amountString);
 		Factions.get().log(usender.getName() + " has been given bank holdings of "+amountString+" from disbanding "+faction.getName()+".");
 	}
 	
@@ -137,17 +137,17 @@ public class FactionsListenerEcon implements Listener
 		if (event.getReason() == MembershipChangeReason.JOIN)
 		{
 			cost = uconf.econCostJoin;
-			desc = "join a faction";
+			desc = "加入公会";
 		}
 		else if (event.getReason() == MembershipChangeReason.LEAVE)
 		{
 			cost = uconf.econCostLeave;
-			desc = "leave a faction";
+			desc = "离开公会";
 		}
 		else if (event.getReason() == MembershipChangeReason.KICK)
 		{
 			cost = uconf.econCostKick;
-			desc = "kick someone from a faction";
+			desc = "被公会开除";
 		}
 		else
 		{

@@ -201,13 +201,13 @@ public class FactionsListenerMain implements Listener
 		
 		if (!faction.getFlag(FFlag.POWERLOSS))
 		{
-			uplayer.msg("<i>You didn't lose any power since the territory you died in works that way.");
+			uplayer.msg("<i>由于你死在了自己的领地内,所以没有损失任何能量.");
 			return;
 		}
 		
 		if (MConf.get().getWorldsNoPowerLoss().contains(player.getWorld().getName()))
 		{
-			uplayer.msg("<i>You didn't lose any power due to the world you died in.");
+			uplayer.msg("<i>你在这个世界的这次死亡没有损失任何能量.");
 			return;
 		}
 		
@@ -223,7 +223,7 @@ public class FactionsListenerMain implements Listener
 		
 		// ... and inform the player.
 		// TODO: A progress bar here would be epic :)
-		uplayer.msg("<i>Your power is now <h>%.2f / %.2f", newPower, uplayer.getPowerMax());
+		uplayer.msg("<i>你现在的能量值为 <h>%.2f / %.2f", newPower, uplayer.getPowerMax());
 	}
 	
 	// -------------------------------------------- //
@@ -308,7 +308,7 @@ public class FactionsListenerMain implements Listener
 				if (notify)
 				{
 					UPlayer attacker = UPlayer.get(eattacker);
-					attacker.msg("<i>PVP is disabled in %s.", defenderPsFaction.describeTo(attacker));
+					attacker.msg("<i>PVP在 %s 被禁用.", defenderPsFaction.describeTo(attacker));
 				}
 				return false;
 			}
@@ -332,7 +332,7 @@ public class FactionsListenerMain implements Listener
 		// NOTE: This check is probably not that important but we could keep it anyways.
 		if (attackerPsFaction.getFlag(FFlag.PVP) == false)
 		{
-			if (notify) uattacker.msg("<i>PVP is disabled in %s.", attackerPsFaction.describeTo(uattacker));
+			if (notify) uattacker.msg("<i>PVP在 %s 被禁用.", attackerPsFaction.describeTo(uattacker));
 			return false;
 		}
 
@@ -345,7 +345,7 @@ public class FactionsListenerMain implements Listener
 
 		if (attackFaction.isNone() && uconf.disablePVPForFactionlessPlayers)
 		{
-			if (notify) uattacker.msg("<i>You can't hurt other players until you join a faction.");
+			if (notify) uattacker.msg("<i>你不能伤害一个尚未加入公会的玩家.");
 			return false;
 		}
 		else if (defendFaction.isNone())
@@ -357,7 +357,7 @@ public class FactionsListenerMain implements Listener
 			}
 			else if (uconf.disablePVPForFactionlessPlayers)
 			{
-				if (notify) uattacker.msg("<i>You can't hurt players who are not currently in a faction.");
+				if (notify) uattacker.msg("<i>你不能伤害一个尚未加入公会的玩家.");
 				return false;
 			}
 		}
@@ -367,7 +367,7 @@ public class FactionsListenerMain implements Listener
 		// Check the relation
 		if (udefender.hasFaction() && relation.isFriend() && defenderPsFaction.getFlag(FFlag.FRIENDLYFIRE) == false)
 		{
-			if (notify) uattacker.msg("<i>You can't hurt %s<i>.", relation.getDescPlayerMany());
+			if (notify) uattacker.msg("<i>你不能伤害 %s<i>.", relation.getDescPlayerMany());
 			return false;
 		}
 
@@ -378,8 +378,8 @@ public class FactionsListenerMain implements Listener
 		{
 			if (notify)
 			{
-				uattacker.msg("<i>You can't hurt %s<i> in their own territory unless you declare them as an enemy.", udefender.describeTo(uattacker));
-				udefender.msg("%s<i> tried to hurt you.", uattacker.describeTo(udefender, true));
+				uattacker.msg("<i>你不能在自己的领地里伤害 %s<i> 除非你把他们设置为敌对.", udefender.describeTo(uattacker));
+				udefender.msg("%s<i> 想要伤害你.", uattacker.describeTo(udefender, true));
 			}
 			return false;
 		}
@@ -395,7 +395,7 @@ public class FactionsListenerMain implements Listener
 			if (notify)
 			{
 				String perc = MessageFormat.format("{0,number,#%}", (uconf.territoryShieldFactor)); // TODO does this display correctly??
-				udefender.msg("<i>Enemy damage reduced by <rose>%s<i>.", perc);
+				udefender.msg("<i>减少敌人伤害 <rose>%s<i>.", perc);
 			}
 		}
 
@@ -472,7 +472,7 @@ public class FactionsListenerMain implements Listener
 		// ... the command may be denied for members of permanent factions ...
 		if (uplayer.hasFaction() && uplayer.getFaction().getFlag(FFlag.PERMANENT) && containsCommand(command, UConf.get(player).denyCommandsPermanentFactionMember))
 		{
-			uplayer.msg("<b>You can't use \"<h>/%s<b>\" as member of a permanent faction.", command);
+			uplayer.msg("<b>你不能对一个永久公会的成员使用 \"<h>/%s<b>\" .", command);
 			event.setCancelled(true);
 			return;
 		}
@@ -489,7 +489,7 @@ public class FactionsListenerMain implements Listener
 		if (deniedCommands == null) return;
 		if (!containsCommand(command, deniedCommands)) return;
 		
-		uplayer.msg("<b>You can't use \"<h>/%s<b>\" in %s territory.", command, Txt.getNicedEnum(rel));
+		uplayer.msg("<b>你不能在 %s 领地上使用 \"<h>/%s<b>\" .", command, Txt.getNicedEnum(rel));
 		event.setCancelled(true);
 	}
 

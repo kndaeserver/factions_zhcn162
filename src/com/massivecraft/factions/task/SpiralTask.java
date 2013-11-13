@@ -50,7 +50,7 @@ public abstract class SpiralTask implements Runnable
 		this.world = Bukkit.getWorld(chunk.getWorld());
 		if (this.world == null)
 		{
-			Factions.get().log(Level.WARNING, "[SpiralTask] A valid world must be specified!");
+			Factions.get().log(Level.WARNING, "[SpiralTask] 必须指定一个有效的世界!");
 			this.stop();
 			return;
 		}
