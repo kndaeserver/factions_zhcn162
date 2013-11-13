@@ -45,7 +45,7 @@ public class CmdFactions extends FCommand
 	public CmdFactionsDisband cmdFactionsDisband = new CmdFactionsDisband();
 	public CmdFactionsAdmin cmdFactionsAdmin = new CmdFactionsAdmin();
 	public CmdFactionsPowerBoost cmdFactionsPowerBoost = new CmdFactionsPowerBoost();
-	public VersionCommand cmdFactionsVersion = new VersionCommand(Factions.get(), Perm.VERSION.node, "v", "version");
+	//public VersionCommand cmdFactionsVersion = new VersionCommand(Factions.get(), Perm.VERSION.node, "v", "version");
 	
 	public CmdFactions()
 	{
@@ -94,7 +94,7 @@ public class CmdFactions extends FCommand
 		this.addSubCommand(this.cmdFactionsDisband);
 		this.addSubCommand(this.cmdFactionsAdmin);
 		this.addSubCommand(this.cmdFactionsPowerBoost);
-		this.addSubCommand(this.cmdFactionsVersion);
+		//this.addSubCommand(this.cmdFactionsVersion);
 	}
 	
 	@Override
