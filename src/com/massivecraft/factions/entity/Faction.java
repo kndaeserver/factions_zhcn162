@@ -218,7 +218,7 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 		{
 			target = target.trim();
 			// This code should be kept for a while to clean out the previous default text that was actually stored in the database.
-			if (target.length() == 0 || target.equals("Default faction description :("))
+			if (target.length() == 0 || target.equals("默认公会口号 :("))
 			{
 				target = null;
 			}
@@ -272,7 +272,7 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 	{
 		if (this.isValidHome(this.home)) return;
 		this.home = null;
-		msg("<b>Your faction home has been un-set since it is no longer in your territory.");
+		msg("<b>你的公会回城点已经取消,因为那里已经不再是你的领地了.");
 	}
 	
 	public boolean isValidHome(PS ps)
@@ -870,7 +870,7 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 			UPlayer uplayer = iter.next();
 			if (!uplayer.attached())
 			{
-				String msg = Txt.parse("<rose>WARN: <i>Faction <h>%s <i>aka <h>%s <i>had unattached uplayer in index:", this.getName(), this.getId());
+				String msg = Txt.parse("<rose>警告: <i>Faction <h>%s <i>aka <h>%s <i>had unattached uplayer in index:", this.getName(), this.getId());
 				Factions.get().log(msg);
 				Factions.get().log(Factions.get().gson.toJson(uplayer));
 				iter.remove();
@@ -986,12 +986,12 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 			// no members left and faction isn't permanent, so disband it
 			if (MConf.get().logFactionDisband)
 			{
-				Factions.get().log("The faction "+this.getName()+" ("+this.getId()+") has been disbanded since it has no members left.");
+				Factions.get().log(""+this.getName()+" ("+this.getId()+") 公会已经解散,因为所有会员都已离开.");
 			}
 
 			for (UPlayer uplayer : UPlayerColls.get().get(this).getAllOnline())
 			{
-				uplayer.msg("The faction %s<i> was disbanded.", this.getName(uplayer));
+				uplayer.msg("%s<i> 公会解散了.", this.getName(uplayer));
 			}
 
 			this.detach();
@@ -1004,8 +1004,8 @@ public class Faction extends Entity<Faction> implements EconomyParticipator
 			}
 				
 			replacements.get(0).setRole(Rel.LEADER);
-			this.msg("<i>Faction leader <h>%s<i> has been removed. %s<i> has been promoted as the new faction leader.", oldLeader == null ? "" : oldLeader.getName(), replacements.get(0).getName());
-			Factions.get().log("Faction "+this.getName()+" ("+this.getId()+") leader was removed. Replacement leader: "+replacements.get(0).getName());
+			this.msg("<i>公会会长 <h>%s<i> 被删除. %s<i> 晋升为新的公会会长.", oldLeader == null ? "" : oldLeader.getName(), replacements.get(0).getName());
+			Factions.get().log("公会 "+this.getName()+" ("+this.getId()+") 会长被删除. 更换会长: "+replacements.get(0).getName());
 		}
 	}
 	

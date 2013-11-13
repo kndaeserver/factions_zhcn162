@@ -34,9 +34,9 @@ public class ReqBankCommandsEnabled extends ReqAbstract
 		UConf uconf = UConf.get(sender);
 		if (!uconf.bankEnabled)
 		{
-			return Txt.parse("<b>Faction banks are disabled in the <h>%s <b>universe.", uconf.getUniverse());
+			return Txt.parse("<b>公会银行功能被禁用 in the <h>%s <b>universe.", uconf.getUniverse());
 		}
-		return Txt.parse("<b>Faction economy features are disabled in the <h>%s <b>universe.", uconf.getUniverse());
+		return Txt.parse("<b>公会经济功能被禁用 in the <h>%s <b>universe.", uconf.getUniverse());
 	}
 	
 }

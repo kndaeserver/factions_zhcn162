@@ -31,7 +31,7 @@ public class ReqHasntFaction extends ReqAbstract
 	@Override
 	public String createErrorMessage(CommandSender sender, MCommand command)
 	{
-		return Txt.parse("<b>You must leave your current faction before you "+(command == null ? "do that" : command.getDesc())+".");
+		return Txt.parse("<b>你必须先离开目前的公会 "+(command == null ? "才能这么做" : command.getDesc())+".");
 	}
 	
 }

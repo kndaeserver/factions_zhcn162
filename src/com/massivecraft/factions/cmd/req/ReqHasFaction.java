@@ -31,7 +31,7 @@ public class ReqHasFaction extends ReqAbstract
 	@Override
 	public String createErrorMessage(CommandSender sender, MCommand command)
 	{
-		return Txt.parse("<b>你必须在一个公会里才可以 "+(command == null ? "do that" : command.getDesc())+".");
+		return Txt.parse("<b>你必须属于一个公会 "+(command == null ? "才能这么做" : command.getDesc())+".");
 	}
 	
 }

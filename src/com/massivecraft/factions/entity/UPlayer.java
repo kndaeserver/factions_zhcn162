@@ -613,13 +613,13 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 		{
 			if (!permanent && this.getRole() == Rel.LEADER)
 			{
-				msg("<b>You must give the leader role to someone else first.");
+				msg("<b>你必须先把会长职务交予某人.");
 				return;
 			}
 			
 			if (!UConf.get(myFaction).canLeaveWithNegativePower && this.getPower() < 0)
 			{
-				msg("<b>You cannot leave until your power is positive.");
+				msg("<b>你必须等到你的能量值为正数才能离开.");
 				return;
 			}
 		}
@@ -633,12 +633,12 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 		{
 			for (UPlayer uplayer : myFaction.getUPlayersWhereOnline(true))
 			{
-				uplayer.msg("%s<i> left %s<i>.", this.describeTo(uplayer, true), myFaction.describeTo(uplayer));
+				uplayer.msg("%s<i> 离开 %s<i>.", this.describeTo(uplayer, true), myFaction.describeTo(uplayer));
 			}
 
 			if (MConf.get().logFactionLeave)
 			{
-				Factions.get().log(this.getName()+" left the faction: "+myFaction.getName());
+				Factions.get().log(this.getName()+" 离开公会: "+myFaction.getName());
 			}
 		}
 		
@@ -649,12 +649,12 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 			// Remove this faction
 			for (UPlayer uplayer : UPlayerColls.get().get(this).getAllOnline())
 			{
-				uplayer.msg("<i>%s<i> was disbanded.", myFaction.describeTo(uplayer, true));
+				uplayer.msg("<i>%s<i> 被解散.", myFaction.describeTo(uplayer, true));
 			}
 
 			if (MConf.get().logFactionDisband)
 			{
-				Factions.get().log("The faction "+myFaction.getName()+" ("+myFaction.getId()+") was disbanded due to the last player ("+this.getName()+") leaving.");
+				Factions.get().log("公会 "+myFaction.getName()+" ("+myFaction.getId()+") 被解散,因为最后一个会员 ("+this.getName()+") 也已离开.");
 			}
 			myFaction.detach();
 		}
@@ -671,7 +671,7 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 		// Validate
 		if (newFaction == oldFaction)
 		{
-			msg("%s<i> already owns this land.", newFaction.describeTo(this, true));
+			msg("%s<i> 已经拥有这片土地.", newFaction.describeTo(this, true));
 			return true;
 		}
 		
@@ -681,7 +681,7 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 			{
 				if (mconf.getWorldsNoClaiming().contains(ps.getWorld()))
 				{
-					msg("<b>Sorry, this world has land claiming disabled.");
+					msg("<b>对不起, 这个世界的土地禁止圈地.");
 					return false;
 				}
 				
@@ -692,7 +692,7 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 				
 				if (newFaction.getUPlayers().size() < uconf.claimsRequireMinFactionMembers)
 				{
-					msg("Factions must have at least <h>%s<b> members to claim land.", uconf.claimsRequireMinFactionMembers);
+					msg("公会至少要有 <h>%s<b> 个成员才能圈地.", uconf.claimsRequireMinFactionMembers);
 					return false;
 				}
 				
@@ -700,13 +700,13 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 				
 				if (uconf.claimedLandsMax != 0 && ownedLand >= uconf.claimedLandsMax && ! newFaction.getFlag(FFlag.INFPOWER))
 				{
-					msg("<b>Limit reached. You can't claim more land.");
+					msg("<b>圈地数量已经到达限制，你不能再圈更多的地.");
 					return false;
 				}
 				
 				if (ownedLand >= newFaction.getPowerRounded())
 				{
-					msg("<b>You can't claim more land. You need more power.");
+					msg("<b>你没有足够的能量值去获取更多的领地.");
 					return false;
 				}
 				
@@ -723,11 +723,11 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 				{
 					if (uconf.claimsCanBeUnconnectedIfOwnedByOtherFaction)
 					{
-						msg("<b>You can only claim additional land which is connected to your first claim or controlled by another faction!");
+						msg("<b>你只能在与你的第一个领地相接的地方或者其他帮派领地相接的地方圈额外的地!");
 					}
 					else
 					{
-						msg("<b>You can only claim additional land which is connected to your first claim!");
+						msg("<b>你只能在与你的第一个领地相接的地方圈地!");
 					}
 					return false;
 				}
@@ -739,25 +739,25 @@ public class UPlayer extends SenderEntity<UPlayer> implements EconomyParticipato
 				{
 					if (!uconf.claimingFromOthersAllowed)
 					{
-						msg("<b>You may not claim land from others.");
+						msg("<b>你不能圈别人的地.");
 						return false;
 					}
 					
 					if (oldFaction.getRelationTo(newFaction).isAtLeast(Rel.TRUCE))
 					{
-						msg("<b>You can't claim this land due to your relation with the current owner.");
+						msg("<b>由于你跟这块地的所有者的关系，你不能圈这块地.");
 						return false;
 					}
 					
 					if (!oldFaction.hasLandInflation())
 					{
-						msg("%s<i> owns this land and is strong enough to keep it.", oldFaction.getName(this));
+						msg("%s<i> 拥有这块土地 and is strong enough to keep it.", oldFaction.getName(this));
 						return false;
 					}
 					
 					if ( ! BoardColls.get().isBorderPs(chunk))
 					{
-						msg("<b>You must start claiming land at the border of the territory.");
+						msg("<b>你不能在地图的边界圈地.");
 						return false;
 					}
 				}

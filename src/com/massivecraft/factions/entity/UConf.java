@@ -43,7 +43,7 @@ public class UConf extends Entity<UConf>
 	public static String getDisabledMessage(Object universe)
 	{
 		UConf uconf = UConf.get(universe);
-		return Txt.parse("<i>Factions are disabled in the <h>%s <i>universe.", uconf.getUniverse());
+		return Txt.parse("<i>公会系统已禁用 in the <h>%s <i>universe.", uconf.getUniverse());
 	}
 	
 	public static boolean isDisabled(Object universe, Object inform)
