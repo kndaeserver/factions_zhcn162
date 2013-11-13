@@ -23,43 +23,43 @@ permissions:
   factions.description: {description: 变更公会口号, default: false}
   factions.disband: {description: 解散工会, default: false}
   factions.faction: {description: 显示所属公会信息, default: false}
-  factions.flag: {description: manage faction flags, default: false}
-  factions.flag.set: {description: set faction flags, default: false}
+  factions.flag: {description: 管理公会flags, default: false}
+  factions.flag.set: {description: 设置公会flags, default: false}
   factions.home: {description: 返回公会传送点, default: false}
-  factions.invite: {description: set if player is invited, default: false}
+  factions.invite: {description: 邀请某玩家加入公会, default: false}
   factions.join: {description: 加入一个公会, default: false}
   factions.join.any: {description: 加入一个封闭的公会, default: false}
   factions.join.others: {description: have another player join faction, default: false}
-  factions.kick: {description: kick player from faction, default: false}
-  factions.leader: {description: set leader for faction, default: false}
-  factions.leader.any: {description: set leader for another faction, default: false}
+  factions.kick: {description: 从公会中踢出某玩家, default: false}
+  factions.leader: {description: 设置公会会长, default: false}
+  factions.leader.any: {description: 设置别的公会会长, default: false}
   factions.leave: {description: 离开你在的公会, default: false}
   factions.list: {description: 列出所有公会, default: false}
-  factions.map: {description: show territory map, default: false}
-  factions.money: {description: manage faction money, default: false}
-  factions.money.balance: {description: show faction money, default: false}
-  factions.money.balance.any: {description: show another factions money, default: false}
-  factions.money.deposit: {description: deposit to faction, default: false}
-  factions.money.f2f: {description: transfer f --> f, default: false}
-  factions.money.f2p: {description: transfer f --> p, default: false}
-  factions.money.p2f: {description: transfer p --> f, default: false}
-  factions.money.withdraw: {description: withdraw from faction, default: false}
-  factions.officer: {description: make player officer, default: false}
-  factions.officer.any: {description: set officers for another faction, default: false}
-  factions.open: {description: set if invitation is required to join, default: false}
-  factions.perm: {description: change faction permissions, default: false}
+  factions.map: {description: 显示领地地图, default: false}
+  factions.money: {description: 管理公会资金, default: false}
+  factions.money.balance: {description: 显示公会资金, default: false}
+  factions.money.balance.any: {description: 显示其他公会的公会资金, default: false}
+  factions.money.deposit: {description: 向公会银行存款, default: false}
+  factions.money.f2f: {description: 划拨资金 公会 --> 公会, default: false}
+  factions.money.f2p: {description: 划拨资金 公会 --> 玩家, default: false}
+  factions.money.p2f: {description: 划拨资金 玩家 --> 公会, default: false}
+  factions.money.withdraw: {description: 从公会银行取款, default: false}
+  factions.officer: {description: 任命公会助理, default: false}
+  factions.officer.any: {description: 设置其他公会的公会助理, default: false}
+  factions.open: {description: 设置是否需要邀请加入公会, default: false}
+  factions.perm: {description: 变更公会权限, default: false}
   factions.player: {description: 显示个人信息或者其他玩家的信息}
-  factions.powerboost: {description: set powerboost, default: false}
-  factions.promote: {description: promote lesser members in your faction, default: false}
-  factions.relation: {description: set relation wish to another faction, default: false}
+  factions.powerboost: {description: 设置能量提升, default: false}
+  factions.promote: {description: 提升公会中的会员职务, default: false}
+  factions.relation: {description: 设置与别的公会的关系, default: false}
   factions.seechunk: {description: see the chunk you stand in, default: false}
-  factions.sethome: {description: set the faction home, default: false}
-  factions.name: {description: set faction name, default: false}
-  factions.title: {description: set player title, default: false}
-  factions.title.color: {description: set player title with color, default: false}
-  factions.unclaim: {description: unclaim land where you stand, default: false}
-  factions.unclaimall: {description: unclaim all land, default: false}
-  factions.version: {description: see plugin version, default: false}
+  factions.sethome: {description: 设置公会回城点, default: false}
+  factions.name: {description: 设置公会名称, default: false}
+  factions.title: {description: 设置玩家头衔, default: false}
+  factions.title.color: {description: 设置玩家头衔的颜色, default: false}
+  factions.unclaim: {description: 释放你脚下的领土, default: false}
+  factions.unclaimall: {description: 释放所有领土, default: false}
+  factions.version: {description: 查看插件版本, default: false}
 # -------------------------------------------- #
 # STAR NOTATION
 # -------------------------------------------- #
