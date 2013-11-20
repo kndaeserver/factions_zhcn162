@@ -6,7 +6,7 @@ public class CmdFactionsRelationAlly extends CmdFactionsRelationAbstract
 {
 	public CmdFactionsRelationAlly()
 	{
-		this.addAliases("ally");
+		this.addAliases("Ω·√À");
 		
 		this.targetRelation = Rel.ALLY;
 	}
