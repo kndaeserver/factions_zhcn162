@@ -16,12 +16,12 @@ public class CmdFactionsPerm extends FCommand
 {
 	public CmdFactionsPerm()
 	{
-		this.addAliases("perm");
+		this.addAliases("权限");
 		
-		this.addOptionalArg("faction", "you");
-		this.addOptionalArg("perm", "all");
-		this.addOptionalArg("relation", "read");
-		this.addOptionalArg("yes/no", "read");
+		this.addOptionalArg("默认公会", "你的");
+		this.addOptionalArg("权限", "所有");
+		this.addOptionalArg("关系", "read");
+		this.addOptionalArg("开启/关闭", "read");
 		this.setErrorOnToManyArgs(false);
 		
 		this.addRequirements(ReqFactionsEnabled.get());
