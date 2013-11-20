@@ -21,9 +21,9 @@ public class CmdFactionsDisband extends FCommand
 {
 	public CmdFactionsDisband()
 	{
-		this.addAliases("disband");
+		this.addAliases("解散公会");
 		
-		this.addOptionalArg("faction", "you");
+		this.addOptionalArg("默认公会", "你在的");
 
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.DISBAND.node));
