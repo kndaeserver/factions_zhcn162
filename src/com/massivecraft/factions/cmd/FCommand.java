@@ -58,12 +58,12 @@ public abstract class FCommand extends MCommand
 			}
 			else
 			{
-				i.sendMessage(Txt.parse("<b>Moderators can't control each other..."));
+				i.sendMessage(Txt.parse("<b>会长不能互相控制..."));
 			}
 		}
 		else
 		{
-			i.sendMessage(Txt.parse("<b>You must be a faction moderator to do that."));
+			i.sendMessage(Txt.parse("<b>你必须是会长才能这么做"));
 		}
 		
 		return false;

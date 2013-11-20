@@ -49,7 +49,7 @@ public class CmdFactionsOfficer extends FCommand
 
 		if (you.getRole() == Rel.LEADER)
 		{
-			msg("<b>目标用户是公会会长.必须先进行降级.");
+			msg("<b>目标玩家是公会会长.必须先进行降级.");
 			return;
 		}
 
