@@ -18,7 +18,7 @@ public abstract class CmdFactionsRelationAbstract extends FCommand
 	
 	public CmdFactionsRelationAbstract()
 	{
-		this.addRequiredArg("faction");
+		this.addRequiredArg("¹«»áÃû");
 		
 		this.addRequirements(ReqFactionsEnabled.get());
 		this.addRequirements(ReqHasPerm.get(Perm.RELATION.node));
