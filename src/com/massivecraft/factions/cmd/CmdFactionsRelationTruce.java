@@ -6,7 +6,7 @@ public class CmdFactionsRelationTruce extends CmdFactionsRelationAbstract
 {
 	public CmdFactionsRelationTruce()
 	{
-		this.addAliases("truce");
+		this.addAliases("ÐÝÕ½");
 		
 		this.targetRelation = Rel.TRUCE;
 	}
